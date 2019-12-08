@@ -3,13 +3,19 @@
 **Ekklesia eDemocracy platform**
 
 ## Subprojects
- 
+
 This repository is a place for shared documentation.
 The platform consists of multiple applications which use separate repositories.
 
 Currently available in public:
 
 * [ekklesia-portal](https://github.com/Piratenpartei/ekklesia-portal): Motion portal, public API and administrative interface
+  * You can visit a running instance at [antrag.piratenpartei.de](https://antrag.piratenpartei.de)
+* [discourse-ekklesia](https://github.com/Piratenpartei/discourse-ekklesia): Discourse plugin for the Ekklesia platform
+
+Coming up next:
+
+* ekklesia-voting: Pseudonymous voting module
 
 
 ## External Software
