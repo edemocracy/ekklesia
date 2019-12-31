@@ -12,6 +12,7 @@ Currently available in public:
 * [ekklesia-portal](https://github.com/Piratenpartei/ekklesia-portal): Motion portal, public API and administrative interface
   * You can visit a running instance at [antrag.piratenpartei.de](https://antrag.piratenpartei.de)
 * [discourse-ekklesia](https://github.com/Piratenpartei/discourse-ekklesia): Discourse plugin for the Ekklesia platform
+* [ekklesia-common](https://github.com/Piratenpartei/ekklesia-common): Common code for the ekklesia platform
 
 Coming up next:
 
