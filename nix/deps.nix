@@ -8,6 +8,7 @@ let
   inherit (pkgs) lib;
 
   pythonEnv = pkgs.python38.withPackages (ps: with ps; [
+    graphviz
     sphinx
     sphinx_rtd_theme ]);
 
