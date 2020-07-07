@@ -69,7 +69,7 @@ Attribute values support Jinja expressions:
 
 .. code-block:: pug
 
-    a.link(href=example_url, class=("extra" if options.extra else "") Example
+    a.link(href=example_url, class=("extra" if options.extra else "")) Example
 
 
 Adds "extra" to class attribute only if options.extra is true:
@@ -238,6 +238,18 @@ Let's say we want to output two values separated by a space:
       = first_part
       |&nbsp;
       = second_part
+
+
+Iteration
+=========
+
+Use for to iterate over a sequence:
+
+.. code-block:: pug
+
+    ul
+      for item in items
+        = li.list-item= item.text
 
 
 Comments
