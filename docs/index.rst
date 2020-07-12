@@ -13,4 +13,5 @@
 
    operations/index
    development/index
+   identity_auth
 
