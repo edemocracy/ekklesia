@@ -32,12 +32,12 @@ for implementing a notification system that can be used by multiple applications
 Portal and voting components need to know if a user can use certain functions that are restricted.
 They may use the following claims in the ID token:
 
--  ``verified``: is this an verified user?
-    (for example: has been personally identified by some process)
--  ``eligible``: is this user eligible to vote?
-   (for example: has paid their membership fee for this year?)
--  ``external_voter``: is using an external means of voting
-   (for example: uses mail-in ballot which prevents voting online)
+* ``verified``: is this an verified user?
+  (for example: has been personally identified by some process)
+* ``eligible``: is this user eligible to vote?
+  (for example: has paid their membership fee for this year?)
+* ``external_voter``: is using an external means of voting
+  (for example: uses mail-in ballot which prevents voting online)
 
 Applications may need to know the ``roles`` of an user.
 Role names may map to the name of a department.

@@ -2,9 +2,15 @@
 Development
 ###########
 
+.. include:: _tech_stack.rst
+
 .. toctree::
    :maxdepth: 3
+   :caption: Contents
 
-   overview
-   templates
+   quickstart
+   dev_env
    concept_tutorial
+   testing
+   templates
+   stylesheets
