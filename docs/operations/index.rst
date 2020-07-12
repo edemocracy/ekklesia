@@ -4,6 +4,6 @@ Operations
 
 .. toctree::
    :maxdepth: 3
+   :caption: Contents
 
-   overview
-   installation
+   running

@@ -8,6 +8,7 @@
 
 .. toctree::
    :maxdepth: 2
+   :caption: Contents
 
    operations/index
    development/index
