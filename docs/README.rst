@@ -3,6 +3,8 @@ Ekklesia
 
 This is the development and operations documentation for the **Ekklesia e-democracy platform**.
 
+`View the full documentation at ReadTheDocs <https://ekklesia.readthedocs.org>`_
+
 Goals
 -----
 
@@ -22,7 +24,7 @@ Subprojects
 The platform consists of multiple applications and supporting projects which use
 separate repositories.
 
--  `ekklesia <https://github.com/Piratenpartei/ekklesia-voting>`__:
+-  `ekklesia <https://github.com/Piratenpartei/ekklesia>`__:
    Shared documentation
 -  `ekklesia-portal <https://github.com/Piratenpartei/ekklesia-portal>`__:
    Motion portal, public API and administrative interface. You can visit a running instance at
