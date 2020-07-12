@@ -7,15 +7,10 @@
 .. include:: README.rst
 
 
+
 .. toctree::
    :maxdepth: 2
-   :caption: Operations
 
    operations/index
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Development
-
    development/index
 
