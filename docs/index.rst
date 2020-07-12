@@ -3,22 +3,19 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Ekklesia's documentation!
-====================================
 
-.. toctree::
-   :maxdepth: 3
-   :caption: Contents:
+.. include:: README.rst
 
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
+   :caption: Operations
+
+   operations/index
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Development
 
    development/index
 
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`search`
