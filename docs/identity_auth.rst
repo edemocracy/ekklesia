@@ -15,15 +15,12 @@ or even be required to log in.
 Expected Claims in the ID Token
 ===============================
 
-Ekklesia applications expect a ``auid`` claim in the OpenID Connect ID token.
-This is an "application-specific user id" which means that it's unique in the context
-of a single application and is only known to that application.
+Ekklesia applications use the standard ``sub`` claim in the OpenID Connect ID token.
+This should be configured as an "pairwise subject identifier" which means that it's
+unique in the context of a single application and is only known to that application.
 
-Applications can save the relationship between the ``auid`` and an internal user object
+Applications can save the relationship between ``sub`` and an internal user object
 that is used to save additional user data needed by the application.
-
-The ``sub`` claim is not used by Ekklesia applications and should be overwritten so
-that it cannot be used to track users across multiple applications.
 
 There could be additional user identifiers that are known to multiple applications if
 they need to exchange information about users. This is not used yet but may be needed
