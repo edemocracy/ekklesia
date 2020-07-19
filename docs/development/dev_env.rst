@@ -4,11 +4,13 @@
 Development Environment
 ***********************
 
-
 To get a consistent development environment, we use
 `Nix <https://nixos.org/nix>`_ to install Python and the project
 dependencies. The development environment also includes PostgreSQL 12,
 linters, a SASS compiler and pytest for running the tests.
+
+The following code snippets are written for *ekklesia-portal* but
+also work for *ekklesia-voting* when you change the project name.
 
 
 Install Nix
@@ -82,8 +84,7 @@ You can connect to the database with psql now:
    psql -h /tmp ekklesia_portal
 
 
-The database can be used by ekklesia_portal with the following
-connection string in the config file:
+Use the following connection string in the app config file:
 
 .. code-block:: yaml
 

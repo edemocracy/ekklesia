@@ -8,6 +8,9 @@ Most applications will consist of multiple concepts.
 Typical concepts would be user, profile, comment, item, document or department.
 
 The *thing* we want to implement here is a blog post.
+We use *ekklesia-portal* as target project here but this also works for other Python
+Ekklesia applications with a Web UI.
+
 
 Building Blocks
 ---------------
