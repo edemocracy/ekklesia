@@ -21,7 +21,7 @@ experimentation in dev:
     Check the database section in the config file to avoid overwriting the
     wrong database!
 
-.. code-block:: shell
+.. code:: shell
 
     python tests/create_test_db.py -c config.yml
 
@@ -31,14 +31,14 @@ Running Migrations
 
 Check the current revision:
 
-.. code-block::
+.. code::
 
     alembic current
 
 Upgrade the schema in the configured database to the latest version
 (may include multiple migration steps):
 
-.. code-block::
+.. code::
 
     alembic upgrade head
 
@@ -48,7 +48,7 @@ an option for that.
 
 Downgrading is also possible:
 
-.. code-block::
+.. code::
 
     alembic downgrade -1
 
@@ -65,7 +65,7 @@ First, change the model/schema code for the app in :file:`src/ekklesia_*/datamod
 Then, generate the migration file with a proper migration message (used for the
 filename and as a comment in the migration module):
 
-.. code-block::
+.. code::
 
   alembic revision --autogenerate -m "Allow no target date for aborted voting phase"
 
