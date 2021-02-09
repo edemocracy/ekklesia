@@ -22,3 +22,4 @@ Development
    stylesheets
    dependencies
    database
+   codestyle
