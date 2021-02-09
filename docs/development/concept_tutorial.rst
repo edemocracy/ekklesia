@@ -1,3 +1,5 @@
+.. _concept-tutorial:
+
 Concept Tutorial
 ================
 

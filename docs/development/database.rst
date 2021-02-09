@@ -5,7 +5,7 @@ Database
 ********
 
 
-Our primary database system is `PostgreSQL <https://www.postgresql.com>`_
+Our primary database system is `PostgreSQL <https://www.postgresql.com>`_.
 We use `SQLAlchemy <https://www.sqlalchemy.org>`_ as ORM and SQL toolkit and
 `Alembic <https://alembic.sqlalchemy.org>`_ for automated database schema migrations.
 

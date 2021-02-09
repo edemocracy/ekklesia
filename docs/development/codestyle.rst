@@ -38,3 +38,8 @@ the last element (here after ``'created_at'``):
         'content',
         'created_at',
     ]
+
+More About Code Style
+=====================
+
+- Recommended talk: `Raymond Hettinger - Beyond PEP 8 -- Best practices for beautiful intelligible code - PyCon 2015 <https://www.youtube.com/watch?v=wf-BqAjZb8M>`_
