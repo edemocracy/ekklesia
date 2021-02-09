@@ -21,3 +21,4 @@ Development
    templates
    stylesheets
    dependencies
+   database
