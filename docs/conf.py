@@ -18,11 +18,11 @@
 # -- Project information -----------------------------------------------------
 
 project = 'Ekklesia'
-copyright = '2020, Ekklesia contributors'
+copyright = '2021, Ekklesia contributors'
 author = 'Ekklesia contributors'
 
 # The full version, including alpha/beta/rc tags
-release = '20.06.0'
+release = '21.2.0'
 
 
 # -- General configuration ---------------------------------------------------
