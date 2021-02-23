@@ -22,18 +22,19 @@ Subprojects
 -----------
 
 The platform consists of multiple applications and supporting projects which use
-separate repositories.
+separate repositories. Project developed by the Ekklesia project can be found in the
+`edemocracy organization on Github <https://github.com/edemocracy>`_.
 
--  `ekklesia <https://github.com/Piratenpartei/ekklesia>`__:
+-  `ekklesia <https://github.com/edemocracy/ekklesia>`__:
    Shared documentation
--  `ekklesia-portal <https://github.com/Piratenpartei/ekklesia-portal>`__:
+-  `ekklesia-portal <https://github.com/edemocracy/ekklesia-portal>`__:
    Motion portal, public API and administrative interface. You can visit a running instance at
    `antrag.piratenpartei.de <https://antrag.piratenpartei.de>`__
--  `ekklesia-voting <https://github.com/Piratenpartei/ekklesia-voting>`__:
+-  `ekklesia-voting <https://github.com/edemocracy/ekklesia-voting>`__:
    Pseudonymous voting component
--  `ekklesia-common <https://github.com/Piratenpartei/ekklesia-common>`__:
+-  `ekklesia-common <https://github.com/edemocracy/ekklesia-common>`__:
    Common code for the ekklesia platform
--  `discourse-ekklesia <https://github.com/Piratenpartei/discourse-ekklesia>`__:
+-  `discourse-ekklesia <https://github.com/edemocracy/discourse-ekklesia>`__:
    Discourse plugin for the Ekklesia platform
 
 
