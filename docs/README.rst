@@ -25,16 +25,17 @@ The platform consists of multiple applications and supporting projects which use
 separate repositories. Project developed by the Ekklesia project can be found in the
 `edemocracy organization on Github <https://github.com/edemocracy>`_.
 
--  `ekklesia <https://github.com/edemocracy/ekklesia>`__:
+-  `ekklesia <https://github.com/edemocracy/ekklesia>`_:
    Shared documentation
--  `ekklesia-portal <https://github.com/edemocracy/ekklesia-portal>`__:
-   Motion portal, public API and administrative interface. You can visit a running instance at
-   `antrag.piratenpartei.de <https://antrag.piratenpartei.de>`__
--  `ekklesia-voting <https://github.com/edemocracy/ekklesia-voting>`__:
+-  `ekklesia-portal <https://github.com/edemocracy/ekklesia-portal>`_:
+   Motion portal, public API and administrative interface.
+-  `ekklesia-voting <https://github.com/edemocracy/ekklesia-voting>`_:
    Pseudonymous voting component
--  `ekklesia-common <https://github.com/edemocracy/ekklesia-common>`__:
+-  `ekklesia-common <https://github.com/edemocracy/ekklesia-common>`_:
    Common code for the ekklesia platform
--  `discourse-ekklesia <https://github.com/edemocracy/discourse-ekklesia>`__:
+-  `nix-ekklesia-vvvote <https://github.com/edemocracy/nix-ekklesia-vvvote>`_:
+   Automated Nix/NixOS deployment for the VVVote voting system.
+-  `discourse-ekklesia <https://github.com/edemocracy/discourse-ekklesia>`_:
    Discourse plugin for the Ekklesia platform
 
 
@@ -45,20 +46,20 @@ The projects aims to integrate with externally developed applications
 that serve the purpose of creating a e-democracy platform. Currently, we
 use or are working on integrating the following projects:
 
--  `Discourse <https://discourse.org>`__: platform for community
+-  `Discourse <https://discourse.org>`_: platform for community
    discussion
 
    -  collaborative development of motion drafts
    -  export/import of motion drafts
    -  general discussion tool
 
--  `Keycloak <https://keycloak.org>`__: identity and access management
+-  `Keycloak <https://keycloak.org>`_: identity and access management
    with OpenID Connect support
--  `OpenSlides <https://openslides.org>`__: digital motion and assembly
+-  `OpenSlides <https://openslides.org>`_: digital motion and assembly
    system
 
    -  motion export to Openslides
    -  voting result import from Openslides
 
--  `VVVote <https://github.com/vvvote/vvvote>`__: cryptographic
+-  `VVVote <https://github.com/vvvote/vvvote>`_: cryptographic
    anonymized online voting system
