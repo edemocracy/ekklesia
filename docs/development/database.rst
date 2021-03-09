@@ -10,11 +10,10 @@ We use `SQLAlchemy <https://www.sqlalchemy.org>`_ as ORM and SQL toolkit and
 `Alembic <https://alembic.sqlalchemy.org>`_ for automated database schema migrations.
 
 
-Creating a Test Database
-========================
+Setting up a Development Database
+=================================
 
-Create a database with example data for automated tests and
-experimentation in dev:
+Create database schema and load example data for experimentation in development:
 
 .. warning::
 
