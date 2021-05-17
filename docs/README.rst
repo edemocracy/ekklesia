@@ -31,6 +31,8 @@ separate repositories. Project developed by the Ekklesia project can be found in
    Motion portal, public API and administrative interface.
 -  `ekklesia-voting <https://github.com/edemocracy/ekklesia-voting>`_:
    Pseudonymous voting component
+-  `ekklesia-notify <https://github.com/edemocracy/ekklesia-notify>`_:
+   API for sending notifications to users
 -  `ekklesia-common <https://github.com/edemocracy/ekklesia-common>`_:
    Common code for the ekklesia platform
 -  `nix-ekklesia-vvvote <https://github.com/edemocracy/nix-ekklesia-vvvote>`_:
@@ -63,3 +65,4 @@ use or are working on integrating the following projects:
 
 -  `VVVote <https://github.com/vvvote/vvvote>`_: cryptographic
    anonymized online voting system
+- `Matrix <https://matrix.org>`_: encrypted notifications
