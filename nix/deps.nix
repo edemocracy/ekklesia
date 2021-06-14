@@ -7,7 +7,7 @@ let
   niv = (import sources_.niv { }).niv;
   inherit (pkgs) lib;
 
-  pythonEnv = pkgs.python38.withPackages (ps: with ps; [
+  pythonEnv = pkgs.python39.withPackages (ps: with ps; [
     graphviz
     sphinx
     sphinx_rtd_theme ]);
