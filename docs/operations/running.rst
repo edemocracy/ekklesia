@@ -54,7 +54,9 @@ Directly From Source
 
 * Build and run app with the config file ``config.yml``::
 
-    nix-build nix/serve_app.nix -o serve_app && serve_app/bin/run config.yml
+    nix-build nix/serve_app.nix -o serve_app && serve_app/bin/run
+
+To change the config location, set the environment variable :code:`EKKLESIA_PORTAL_CONFIG`.
 
 
 * Build static assets and run Nginx::
