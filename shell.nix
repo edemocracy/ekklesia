@@ -1,7 +1,7 @@
 { sources ? null }:
 let
   deps = import ./nix/deps.nix { inherit sources; };
-  inherit (deps) niv pythonEnv pkgs;
+  inherit (deps) niv pythonEnv pkgs tools;
   caBundle = "${pkgs.cacert}/etc/ssl/certs/ca-bundle.crt";
 
 in
@@ -10,7 +10,7 @@ pkgs.mkShell {
   buildInputs = [
     niv
     pythonEnv
-  ];
+  ] ++ tools;
 
   shellHook = ''
     export NIX_SSL_CERT_FILE=${caBundle}

@@ -12,6 +12,10 @@ let
     sphinx
     sphinx_rtd_theme ]);
 
+  tools = with pkgs; [
+    vale
+  ];
+
 in {
-  inherit niv pkgs pythonEnv;
+  inherit niv pkgs pythonEnv tools;
 }
