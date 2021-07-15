@@ -12,6 +12,6 @@
     * `Sass <https://sass-lang.com>`_ Framework `Bootstrap 4 <https://getbootstrap.com>`_
     * `htmx <https://htmx.org>`_ for "AJAX" requests directly from HTML.
 
-* Database: `PostgreSQL 12 <https://www.postgresql.com>`_
+* Database: `PostgreSQL 13 <https://www.postgresql.com>`_
 * Dependency management and build tool: `Nix <https://nixos.org/nix>`_
 * (Optional) Docker / Kubernetes for running Docker images built by Nix
