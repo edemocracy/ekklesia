@@ -36,14 +36,14 @@ Install Lorri
 =============
 
 The best way to get a development shell is to use
-`Lorri <https://github.com/target/lorri>`_ which improves the builtin
+`Lorri <https://github.com/nix-community/lorri>`_ which improves the builtin
 ``nix-shell`` command.
 
 Install ``lorri`` (also works for updates):
 
 .. code-block:: shell
 
-   nix-env -if https://github.com/target/lorri/archive/master.tar.gz
+   nix-env -i lorri
 
 
 This is enough to use ``lorri shell`` needed for the quick start section
@@ -52,7 +52,23 @@ below.
 We also recommend using the ``direnv`` integration. This will
 automatically enter the development shell when changing to the project
 directory. Please follow the `Lorri Installation
-Instructions <https://github.com/target/lorri#setup-on-nixos-or-with-home-manager-on-linux>`_.
+Instructions <https://github.com/nix-community/lorri#setup-on-nixos-or-with-home-manager-on-linux>`_.
+
+Setting up the Cachix Binary Cache
+==================================
+
+To speed up installation, you should add the edemocracy binary cache hosted on `Cachix <https://cachix.org>`.
+
+If your user can edit Nix config files (when using a single-user installation on a non-NixOS system, for example ),
+just install the Cachix client and add the edemocracy cache:
+
+.. code-block:: shell
+
+   nix-env -i cachix
+   cachix use edemocracy
+
+If cachix cannot change the config, it will instructions on how to do it.
+On NixOS, you have to run cachix as root (`sudo cachix use edemocracy`) or another trusted Nix user.
 
 
 Running PostgreSQL as User
