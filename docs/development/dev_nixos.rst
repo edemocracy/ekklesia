@@ -31,8 +31,8 @@ also work for *ekklesia-voting* when you change the project name.
       ./ekklesia_dev.nix
     ];
 
-5. Download our :download:`recommended NixOS configuration <./ekklesia_dev.nix>`
-   and put it in :file:`/etc/nixos`::
+5. Fetch our recommended NixOS configuration with curl
+   and put it in :file:`/etc/nixos` (you can also :download:`download it here<./ekklesia_dev.nix>`)::
 
     curl -O https://raw.githubusercontent.com/edemocracy/ekklesia/master/docs/development/ekklesia_dev.nix
     sudo mv ekklesia_dev.nix /etc/nixos
