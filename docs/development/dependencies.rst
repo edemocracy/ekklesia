@@ -39,7 +39,7 @@ To see what's available, use ``poetry show ekklesia-common`` or have a look at :
 
 After changing dependencies, it's a good idea to run `nix-build` to see if everything builds with Nix.
 Using ``lorri daemon`` also helps finding problems. Some "exotic" packages need further help to build with Nix.
-Problems can be caused by build dependencies that are not recognized automatically by poetry2nix.
+Problems can be caused by build dependencies that aren't recognized automatically by poetry2nix.
 In this case, the overrides in :file:`deps.nix` must be changed.
 We already have some examples of doing that.
 Poetry2nix provides a lot of common overrides so most popular packages should just work.

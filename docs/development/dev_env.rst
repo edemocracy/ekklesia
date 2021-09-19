@@ -6,7 +6,7 @@ Development Environment
 
 To get a consistent development environment, we use
 `Nix <https://nixos.org/nix>`_ to install Python and the project
-dependencies. The development environment also includes PostgreSQL 12,
+dependencies. The development environment also includes PostgreSQL,
 linters, a SASS compiler and pytest for running the tests.
 
 The following code snippets are written for *ekklesia-portal* but
