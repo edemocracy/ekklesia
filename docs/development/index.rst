@@ -18,6 +18,7 @@ Development
 
    quickstart
    dev_env
+   dev_nixos
    concept_tutorial
    testing
    templates
