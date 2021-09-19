@@ -54,3 +54,28 @@ also work for *ekklesia-voting* when you change the project name.
     echo "use nix" > .envrc
     direnv allow
     # direnv runs nix-build now
+
+10. Compile translations and CSS::
+
+    ipython makebabel.ipy compile
+    sassc -I $SASS_PATH src/ekklesia_portal/sass/portal.sass \
+        src/ekklesia_portal/static/css/portal.css
+
+
+11. Create a config file named ``config.yml`` using the config template
+   from ``src/ekklesia_portal/config.example.yml``. Under database, you have to change ``uri``. The section should look like this::
+
+    database:
+        uri: "postgresql+psycopg2:///ekklesia_portal?host=/run/postgresql"
+        fts_language: 'english'
+
+
+12. Initialize the dev database with a custom config file::
+
+    python tests/create_test_db.py -c config.yml
+
+
+13. The development server can be run with a custom config file by
+   executing::
+
+    python src/ekklesia_portal/runserver.py –debug -c config.yml 2>&1 | eliot-tree -l0

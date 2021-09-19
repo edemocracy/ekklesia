@@ -25,7 +25,7 @@ have a look at :ref:`dev-env`.
 
 2. Compile translations and CSS::
 
-    makebabel.ipy compile
+    ipython makebabel.ipy compile
     sassc -I $SASS_PATH src/ekklesia_portal/sass/portal.sass \
         src/ekklesia_portal/static/css/portal.css
 
@@ -44,4 +44,4 @@ have a look at :ref:`dev-env`.
 5. The development server can be run with a custom config file by
    executing::
 
-    python src/ekklesia_portal/runserver.py –debug -c config.yml
+    python src/ekklesia_portal/runserver.py –debug -c config.yml 2>&1 | eliot-tree -l0
