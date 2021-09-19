@@ -18,9 +18,10 @@
   environment.pathsToLink = [
     "/share/nix-direnv"
   ];
-  servies.postgresql = {
+  services.postgresql = {
     enable = true;
     ensureDatabases = [
+      "demo"
       "ekklesia_portal"
       #"ekklesia_voting" # add additional databases like this
     ];
@@ -28,6 +29,7 @@
       {
         name = "demo";
         ensurePermissions = {
+          "DATABASE demo" = "ALL PRIVILEGES";
           "DATABASE ekklesia_portal" = "ALL PRIVILEGES";
           #"DATABASE ekklesia_voting" = "ALL PRIVILEGES";
         };

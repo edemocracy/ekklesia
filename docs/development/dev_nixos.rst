@@ -14,26 +14,26 @@ also work for *ekklesia-voting* when you change the project name.
 
 1. Get the `NixOS 21.05 VirtualBox appliance <https://nixos.org/download.html#nixos-virtualbox>`_
    and follow the instructions there to import and start the VM.
-2. Open :command:`konsole` and run the following commands as the demo user.
+2. In the VM, open :command:`konsole` and run the following commands as the demo user.
 3. Add the *edemocracy* binary cache::
 
     # password for sudo is `demo`
     nix-shell -p cachix --run "sudo cachix use edemocracy"
     # ignore the instructions shown by cachix, we do that later.
 
-4. Edit :file:`/etc/nixos/configuration.nix` and change the `imports` line to::
+4. Edit :file:`/etc/nixos/configuration.nix` (using `sudo nano /etc/nixos/configuration.nix`, for example) and change the `imports` line to::
 
     # no commas between list items in Nix!
     imports = [
-      ...
+      <nixpkgs/nixos/modules/installer/virtualbox-demo.nix>
       ./ekklesia_dev.nix
     ];
 
 5. Download our :download:`recommended NixOS configuration <./ekklesia_dev.nix>`
    and put it in :file:`/etc/nixos`::
 
-    wget https://raw.githubusercontent.com/edemocracy/ekklesia/master/docs/development/ekklesia_dev.nix
-    sudo mv ekklesia_dev.vm /etc/nixos
+    curl -O https://raw.githubusercontent.com/edemocracy/ekklesia/master/docs/development/ekklesia_dev.nix
+    sudo mv ekklesia_dev.nix /etc/nixos
 
 6. Rebuild the NixOS system to activate our configuration::
 
