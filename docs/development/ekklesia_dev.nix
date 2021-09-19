@@ -2,6 +2,10 @@
 {
   imports = [ ./cachix.nix ];
 
+  environment.pathsToLink = [
+    "/share/nix-direnv"
+  ];
+
   environment.systemPackages = with pkgs; [
     cachix
     config.services.postgresql.package
@@ -11,13 +15,16 @@
     nix-direnv
     pgcli
   ];
+
   nix.extraOptions = ''
     keep-outputs = true
     keep-derivations = true
   '';
-  environment.pathsToLink = [
-    "/share/nix-direnv"
-  ];
+
+  programs.bash.interactiveShellInit = ''
+    eval "$(direnv hook bash)"
+  '';
+
   services.postgresql = {
     enable = true;
     ensureDatabases = [
