@@ -8,6 +8,8 @@ You can use the official NixOS VirtualBox appliance on your dev machine if you w
 on our preferred production system NixOS. If you want to develop on another system, please look at
 :ref:`quickstart`
 
+VM Preparation
+==============
 
 The following code snippets are written for *ekklesia-portal* but
 also work for *ekklesia-voting* when you change the project name.
@@ -39,43 +41,45 @@ also work for *ekklesia-voting* when you change the project name.
 
     sudo nixos-rebuild switch
 
+
 7. Tell `direnv <https://direnv.net>`_ where `nix-direnv <https://github.com/nix-community/nix-direnv>`_ is located::
 
     echo "source /run/current-system/sw/share/nix-direnv/direnvrc" > ~/.direnvrc
 
-8. Clone the repository and change to the checked out directory::
+
+Setting up the Project
+======================
+
+1. Clone the repository and change to the checked out directory::
 
     git clone https://github.com/edemocracy/ekklesia-portal
     cd ekklesia-portal
 
-9. Tell `direnv` to use `nix-direnv` whenever you enter the directory.
-   `nix-direnv` starts building immediately which may take a while::
+2. Tell `direnv` to use `nix-direnv` whenever you enter the directory. `nix-direnv` starts building immediately which may take a while::
 
     echo "use nix" > .envrc
     direnv allow
     # direnv runs nix-build now
 
-10. Compile translations and CSS::
+3. Compile translations and CSS::
 
     ipython makebabel.ipy compile
     sassc -I $SASS_PATH src/ekklesia_portal/sass/portal.sass \
         src/ekklesia_portal/static/css/portal.css
 
 
-11. Create a config file named ``config.yml`` using the config template
-   from ``src/ekklesia_portal/config.example.yml``. Under database, you have to change ``uri``. The section should look like this::
+4. Create a config file named ``config.yml`` using the config template from ``src/ekklesia_portal/config.example.yml``. Under database, you have to change ``uri``. The section should look like this::
 
     database:
         uri: "postgresql+psycopg2:///ekklesia_portal?host=/run/postgresql"
         fts_language: 'english'
 
 
-12. Initialize the dev database with a custom config file::
+5. Initialize the dev database with a custom config file::
 
     python tests/create_test_db.py -c config.yml
 
 
-13. The development server can be run with a custom config file by
-   executing::
+6. The development server can be run with a custom config file by executing::
 
     python src/ekklesia_portal/runserver.py –debug -c config.yml 2>&1 | eliot-tree -l0
