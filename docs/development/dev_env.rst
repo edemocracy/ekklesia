@@ -35,9 +35,9 @@ installation script requires that you have sudo access to root.
 Install Lorri
 =============
 
-The best way to get a development shell is to use
+A good way to get a development shell is to use
 `Lorri <https://github.com/nix-community/lorri>`_ which improves the builtin
-``nix-shell`` command.
+``nix-shell`` command. Another option is to use *nix-direnv* as described in the next section.
 
 Install ``lorri`` (also works for updates):
 
@@ -54,12 +54,24 @@ automatically enter the development shell when changing to the project
 directory. Please follow the `Lorri Installation
 Instructions <https://github.com/nix-community/lorri#setup-on-nixos-or-with-home-manager-on-linux>`_.
 
+
+Setting up nix-direnv
+=====================
+
+Instead of lorri (described above), you can also use direnv <https://direnv.net>`_
+with `nix-direnv <https://github.com/nix-community/nix-direnv>` to get a
+automatically updating development shell. See the linked pages for
+instruction on how to set them up.
+
+
+.. _cachix:
+
 Setting up the Cachix Binary Cache
 ==================================
 
-To speed up installation, you should add the edemocracy binary cache hosted on `Cachix <https://cachix.org>`.
+To speed up installation, you should add the edemocracy binary cache hosted on `Cachix <https://cachix.org>`_.
 
-If your user can edit Nix config files (when using a single-user installation on a non-NixOS system, for example ),
+If your user can edit Nix config files (when using a single-user installation on a non-NixOS system, for example),
 just install the Cachix client and add the edemocracy cache:
 
 .. code-block:: shell

@@ -4,16 +4,23 @@
 Development Quick Start
 ***********************
 
-Set up an environment to run an local instance of the application.
+This chapter describes briefly how to set up a development environment to run a local instance of the application.
 
 Setting up the environment for testing and running tests is described in :ref:`testing`.
 
 
-The following instructions assume that *Nix* and *lorri* are already installed,
-and an empty + writable PostgreSQL database can be accessed somehow.
+.. note::
 
-If you don't have *Nix* and *lorri* or can’t use an existing PostgreSQL server,
-have a look at :ref:`dev-env`.
+    The following instructions assume that *Nix* and *lorri* are already installed,
+    and an empty + writable PostgreSQL database can be accessed somehow.
+    If you don't have *Nix* and *lorri* or can’t use an existing PostgreSQL server,
+    have a look at :ref:`dev-env`.
+
+.. note::
+
+    It's strongly recommended to also follow the instructions at :ref:`cachix`
+    or the first step will take a long time to complete.
+
 
 1. Clone the repository and enter nix shell in the project root folder to open a shell which is
    your dev environment::
@@ -21,7 +28,6 @@ have a look at :ref:`dev-env`.
     git clone https://github.com/edemocracy/ekklesia-portal
     cd ekklesia-portal
     lorri shell
-
 
 2. Compile translations and CSS::
 

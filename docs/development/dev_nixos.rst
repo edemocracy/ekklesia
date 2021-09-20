@@ -4,9 +4,18 @@
 NixOS Virtualbox Dev VM
 ***********************
 
-You can use the official NixOS VirtualBox appliance on your dev machine if you want to run the project
-on our preferred production system NixOS. If you want to develop on another system, please look at
-:ref:`quickstart`
+You can use the official NixOS VirtualBox appliance if you want to run the project
+on our preferred production system `NixOS <https://nixos.org>`_.
+
+This will guide you from downloading the appliance to a running application.
+
+.. note::
+
+    You need `VirtualBox <https://www.virtualbox.org>`_ installed on your system.
+
+.. note::
+
+    If you want to run the application elsewhere, please look at :ref:`quickstart`
 
 VM Preparation
 ==============
