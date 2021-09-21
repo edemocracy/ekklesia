@@ -1,3 +1,7 @@
+.. The content of this file is duplicated in the README.rst because Github doesn't
+   support the include directive. Remember to change both files!
+
+
 This is the development and operations documentation for the **Ekklesia e-democracy platform**.
 
 Goals
