@@ -18,7 +18,7 @@ Setting up the environment for testing and running tests is described in :ref:`t
 
 .. note::
 
-    It's strongly recommended to also follow the instructions at :ref:`cachix`
+    It's strongly recommended to also follow the instructions at :ref:`cachix-binary-cache`
     or the first step will take a long time to complete.
 
 

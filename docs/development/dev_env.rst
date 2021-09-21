@@ -64,7 +64,7 @@ automatically updating development shell. See the linked pages for
 instruction on how to set them up.
 
 
-.. _cachix:
+.. _cachix-binary-cache:
 
 Setting up the Cachix Binary Cache
 ==================================

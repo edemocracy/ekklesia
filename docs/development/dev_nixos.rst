@@ -25,7 +25,9 @@ also work for *ekklesia-voting* when you change the project name.
 
 1. Get the `NixOS 21.05 VirtualBox appliance <https://nixos.org/download.html#nixos-virtualbox>`_
    and follow the instructions there to import and start the VM.
-2. In the VM, open :command:`konsole` and run the following commands as the demo user.
+   Enable clipboard integration in the VirtualBox menu bar with *Devices -> Shared Clipboard -> Host to Guest*
+   so you can copy-paste longer commands from here.
+2. In the VM, open :command:`konsole` (press :command:`Alt-F1` and type *konsole*) and run the following commands as the demo user.
 3. Add the *edemocracy* binary cache::
 
     # password for sudo is `demo`
@@ -46,9 +48,10 @@ also work for *ekklesia-voting* when you change the project name.
     curl -O https://raw.githubusercontent.com/edemocracy/ekklesia/master/docs/development/ekklesia_dev.nix
     sudo mv ekklesia_dev.nix /etc/nixos
 
-6. Rebuild the NixOS system to activate our configuration::
+6. Rebuild the NixOS system to activate our configuration and reload the current shell::
 
     sudo nixos-rebuild switch
+    exec bash
 
 
 7. Tell `direnv <https://direnv.net>`_ where `nix-direnv <https://github.com/nix-community/nix-direnv>`_ is located::
@@ -77,11 +80,19 @@ Setting up the Project
         src/ekklesia_portal/static/css/portal.css
 
 
-4. Create a config file named ``config.yml`` using the config template from ``src/ekklesia_portal/config.example.yml``. Under database, you have to change ``uri``. The section should look like this::
+4. Create a config file named ``config.yml`` using the config template from ``src/ekklesia_portal/config.example.yml``.
+   Under ``database``, you have to change ``uri``.
+   Under ``app``, change ``force_ssl`` to *false* and ``insecure_development_mode`` to *true*.
+   The beginnin of the config file should look like this::
 
     database:
         uri: "postgresql+psycopg2:///ekklesia_portal?host=/run/postgresql"
         fts_language: 'english'
+    app:
+        instance_name: my_ekklesia_portal
+        insecure_development_mode: true
+        login_visible: true
+        force_ssl: false
 
 
 5. Initialize the dev database with a custom config file::
@@ -91,4 +102,4 @@ Setting up the Project
 
 6. The development server can be run with a custom config file by executing::
 
-    python src/ekklesia_portal/runserver.py –debug -c config.yml 2>&1 | eliot-tree -l0
+    python src/ekklesia_portal/runserver.py --debug -c config.yml 2>&1 | eliot-tree -l0
