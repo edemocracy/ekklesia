@@ -1,9 +1,4 @@
-Ekklesia
-========
-
 This is the development and operations documentation for the **Ekklesia e-democracy platform**.
-
-`View the full documentation at ReadTheDocs <https://ekklesia.readthedocs.org>`_
 
 Goals
 -----
