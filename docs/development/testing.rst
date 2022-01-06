@@ -24,10 +24,9 @@ Steps 3 and 4 set up a separate database for running the tests.
     lorri shell
 
 
-2. Compile translations::
+2. Compile translations and CSS (look at dodo.py to see what this does)::
 
-    ipython makebabel.ipy compile
-
+    doit
 
 3. Make sure that the database connection URL points to an empty + writable database.
    By default, the tests use the Postgres socket in :file:`/tmp` and the database name is

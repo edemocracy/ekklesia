@@ -29,12 +29,9 @@ Setting up the environment for testing and running tests is described in :ref:`t
     cd ekklesia-portal
     lorri shell
 
-2. Compile translations and CSS::
+2. Compile translations and CSS (look at dodo.py to see what this does)::
 
-    ipython makebabel.ipy compile
-    sassc -I $SASS_PATH src/ekklesia_portal/sass/portal.sass \
-        src/ekklesia_portal/static/css/portal.css
-
+    doit
 
 3. Create a config file named ``config.yml`` using the config template
    from ``src/ekklesia_portal/config.example.yml`` or skip this to use
