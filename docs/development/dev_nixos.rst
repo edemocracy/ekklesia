@@ -80,7 +80,7 @@ Setting up the Project
 4. Create a config file named ``config.yml`` using the config template from ``src/ekklesia_portal/config.example.yml``.
    Under ``database``, you have to change ``uri``.
    Under ``app``, change ``force_ssl`` to *false* and ``insecure_development_mode`` to *true*.
-   The beginnin of the config file should look like this::
+   The beginning of the config file should look like this::
 
     database:
         uri: "postgresql+psycopg2:///ekklesia_portal?host=/run/postgresql"
@@ -100,3 +100,20 @@ Setting up the Project
 6. The development server can be run with a custom config file by executing::
 
     python src/ekklesia_portal/runserver.py --debug -c config.yml 2>&1 | eliot-tree -l0
+
+
+Setting up Tests
+================
+
+1. Add an environment variable to .envrc to configure the test database URL::
+
+   echo 'export EKKLESIA_PORTAL_TEST_DB_URL="postgresql+psycopg2:///test_ekklesia_portal?host=/run/postgresql"' >> .envrc
+   direnv allow
+
+2. Populate the test database::
+
+    python tests/create_test_db.py
+
+3. Run all tests::
+
+    pytest
