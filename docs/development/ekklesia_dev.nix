@@ -30,6 +30,7 @@
     ensureDatabases = [
       "demo"
       "ekklesia_portal"
+      "test_ekklesia_portal"
       #"ekklesia_voting" # add additional databases like this
     ];
     ensureUsers = [
@@ -38,6 +39,7 @@
         ensurePermissions = {
           "DATABASE demo" = "ALL PRIVILEGES";
           "DATABASE ekklesia_portal" = "ALL PRIVILEGES";
+          "DATABASE test_ekklesia_portal" = "ALL PRIVILEGES";
           #"DATABASE ekklesia_voting" = "ALL PRIVILEGES";
         };
       }
