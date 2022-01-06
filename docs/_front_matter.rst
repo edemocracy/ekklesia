@@ -17,8 +17,8 @@ out-of-the-box for common workflows. Applications developed as part of
 the platform should be highly customizable themselves, either by
 configuration or easy extension on the source code level.
 
-Subprojects
------------
+Sub Projects
+------------
 
 The platform consists of multiple applications and supporting projects which use
 separate repositories. Project developed by the Ekklesia project can be found in the

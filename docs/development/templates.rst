@@ -179,7 +179,7 @@ Logic should be implemented in a Cell method or code called by a cell method.
 Conditionals
 ============
 
-Conditionals can check values for "truthyness" like in Jinja/Python:
+Conditionals can check values for "truthiness" like in Jinja/Python:
 
 .. code-block:: pug
 
@@ -266,6 +266,6 @@ Code Style
 ==========
 
 * Always use 2 spaces for indentation. Do not mix!
-* Line length should not exceed 120, but sometimes it's neccessary to write longer lines.
+* Line length should not exceed 120, but sometimes it's necessary to write longer lines.
 * Avoid putting ``= output`` directly after a HTML tag, especially when it has multiple attributes.
   Put it on a indented line instead.
