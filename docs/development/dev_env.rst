@@ -4,6 +4,11 @@
 Development Environment
 ***********************
 
+.. note::
+
+    To get an overview on how to set up a development environment, please read :ref:`quickstart`
+    first or see :ref:`dev_nixos` to learn how to set up a NixOS development VM from start to finish.
+
 To get a consistent development environment, we use
 `Nix <https://nixos.org/nix>`_ to install Python and the project
 dependencies. The development environment also includes PostgreSQL,
@@ -11,7 +16,6 @@ linters, a SASS compiler and pytest for running the tests.
 
 The following code snippets are written for *ekklesia-portal* but
 also work for *ekklesia-voting* when you change the project name.
-
 
 Install Nix
 ===========
@@ -59,7 +63,7 @@ Setting up nix-direnv
 =====================
 
 Instead of lorri (described above), you can also use direnv <https://direnv.net>`_
-with `nix-direnv <https://github.com/nix-community/nix-direnv>` to get a
+with `nix-direnv <https://github.com/nix-community/nix-direnv>`_ to get a
 automatically updating development shell. See the linked pages for
 instruction on how to set them up.
 
