@@ -27,12 +27,12 @@ the last Git tag. You can set a different tag by adding
 
 * Build app image as `docker-image-ekklesia-portal.tar` and import it::
 
-    ./docker.nix –argstr tag mytag docker load -i docker-image-ekklesia-portal.tar
+    ./docker.nix --argstr tag mytag docker load -i docker-image-ekklesia-portal.tar
 
 
 * Build and import static file image::
 
-    ./docker_static.nix –argstr tag mytag docker load -i docker-image-ekklesia-portal-static.tar
+    ./docker_static.nix --argstr tag mytag docker load -i docker-image-ekklesia-portal-static.tar
 
 
 * Run app container::
@@ -67,4 +67,3 @@ To change the config location, set the environment variable :code:`EKKLESIA_PORT
 * Build static assets for use with another web server::
 
     nix-build nix/static_files.nix -o static_files
-

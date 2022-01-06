@@ -47,4 +47,4 @@ Setting up the environment for testing and running tests is described in :ref:`t
 5. The development server can be run with a custom config file by
    executing::
 
-    python src/ekklesia_portal/runserver.py –debug -c config.yml 2>&1 | eliot-tree -l0
+    python src/ekklesia_portal/runserver.py --debug -c config.yml 2>&1 | eliot-tree -l0
