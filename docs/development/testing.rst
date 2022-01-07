@@ -36,7 +36,7 @@ Steps 3 and 4 set up a separate database for running the tests.
 
 4. Initialize the test database::
 
-   python tests/create_test_db.py
+    python tests/create_test_db.py
 
 
 Running Tests

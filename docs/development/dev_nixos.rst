@@ -107,8 +107,8 @@ Setting up Tests
 
 1. Add an environment variable to .envrc to configure the test database URL::
 
-   echo 'export EKKLESIA_PORTAL_TEST_DB_URL="postgresql+psycopg2:///test_ekklesia_portal?host=/run/postgresql"' >> .envrc
-   direnv allow
+    echo 'export EKKLESIA_PORTAL_TEST_DB_URL="postgresql+psycopg2:///test_ekklesia_portal?host=/run/postgresql"' >> .envrc
+    direnv allow
 
 2. Populate the test database::
 
