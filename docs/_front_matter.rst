@@ -1,11 +1,9 @@
-.. The content of this file is duplicated in the README.rst because Github doesn't
-   support the include directive. Remember to change both files!
-
+% The content of this file is duplicated in the README.rst because Github doesn't
+% support the include directive. Remember to change both files!
 
 This is the development and operations documentation for the **Ekklesia e-democracy platform**.
 
-Goals
------
+# Goals
 
 The aim of the Ekklesia project is to provide an open, extensible platform for
 direct electronic democracy. Organisations have different requirements
@@ -17,51 +15,50 @@ out-of-the-box for common workflows. Applications developed as part of
 the platform should be highly customizable themselves, either by
 configuration or easy extension on the source code level.
 
-Sub Projects
-------------
+# Sub Projects
 
 The platform consists of multiple applications and supporting projects which use
 separate repositories. Project developed by the Ekklesia project can be found in the
-`edemocracy organization on Github <https://github.com/edemocracy>`_.
+[edemocracy organization on Github](https://github.com/edemocracy).
 
--  `ekklesia <https://github.com/edemocracy/ekklesia>`_:
-   Shared documentation
--  `ekklesia-portal <https://github.com/edemocracy/ekklesia-portal>`_:
-   Motion portal, public API and administrative interface.
--  `ekklesia-voting <https://github.com/edemocracy/ekklesia-voting>`_:
-   Pseudonymous voting component
--  `ekklesia-notify <https://github.com/edemocracy/ekklesia-notify>`_:
-   API for sending notifications to users
--  `ekklesia-common <https://github.com/edemocracy/ekklesia-common>`_:
-   Common code for the ekklesia platform
--  `nix-ekklesia-vvvote <https://github.com/edemocracy/nix-ekklesia-vvvote>`_:
-   Automated Nix/NixOS deployment for the VVVote voting system.
--  `discourse-ekklesia <https://github.com/edemocracy/discourse-ekklesia>`_:
-   Discourse plugin for the Ekklesia platform
+- [ekklesia](https://github.com/edemocracy/ekklesia):
+  Shared documentation
+- [ekklesia-portal](https://github.com/edemocracy/ekklesia-portal):
+  Motion portal, public API and administrative interface.
+- [ekklesia-voting](https://github.com/edemocracy/ekklesia-voting):
+  Pseudonymous voting component
+- [ekklesia-notify](https://github.com/edemocracy/ekklesia-notify):
+  API for sending notifications to users
+- [ekklesia-common](https://github.com/edemocracy/ekklesia-common):
+  Common code for the ekklesia platform
+- [nix-ekklesia-vvvote](https://github.com/edemocracy/nix-ekklesia-vvvote):
+  Automated Nix/NixOS deployment for the VVVote voting system.
+- [discourse-ekklesia](https://github.com/edemocracy/discourse-ekklesia):
+  Discourse plugin for the Ekklesia platform
 
-
-External Software
------------------
+# External Software
 
 The projects aims to integrate with externally developed applications
 that serve the purpose of creating a e-democracy platform. Currently, we
 use or are working on integrating the following projects:
 
--  `Discourse <https://discourse.org>`_: platform for community
-   discussion
+- [Discourse](https://discourse.org): platform for community
+  discussion
 
-   -  collaborative development of motion drafts
-   -  export/import of motion drafts
-   -  general discussion tool
+  - collaborative development of motion drafts
+  - export/import of motion drafts
+  - general discussion tool
 
--  `Keycloak <https://keycloak.org>`_: identity and access management
-   with OpenID Connect support
--  `OpenSlides <https://openslides.org>`_: digital motion and assembly
-   system
+- [Keycloak](https://keycloak.org): identity and access management
+  with OpenID Connect support
 
-   -  motion export to Openslides
-   -  voting result import from Openslides
+- [OpenSlides](https://openslides.org): digital motion and assembly
+  system
 
--  `VVVote <https://github.com/vvvote/vvvote>`_: cryptographic
-   anonymized online voting system
-- `Matrix <https://matrix.org>`_: encrypted notifications
+  - motion export to Openslides
+  - voting result import from Openslides
+
+- [VVVote](https://github.com/vvvote/vvvote): cryptographic
+  anonymized online voting system
+
+- [Matrix](https://matrix.org): encrypted notifications
