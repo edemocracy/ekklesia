@@ -1,6 +1,6 @@
 - Backend:
 
-  > - Main language: [Python 3.9](https://www.python.org)
+  > - Main language: [Python 3.10](https://www.python.org)
   > - Web framework: [Morepath](http://morepath.readthedocs.org)
   > - Testing: [pytest](https://pytest.org),
   >   [WebTest](https://docs.pylonsproject.org/projects/webtest/en/latest/)
