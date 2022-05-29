@@ -4,7 +4,7 @@
 
 :::{note}
 To get an overview on how to set up a development environment, please read {ref}`quickstart`
-or see {ref}`_dev-nixos-virtualbox` to learn how to set up a NixOS development VM from start to finish.
+or see {ref}`dev-nixos-virtualbox` to learn how to set up a NixOS development VM from start to finish.
 :::
 
 To get a consistent development environment, we use
