@@ -87,14 +87,13 @@ $ tree /home/ts/git/ekklesia-portal/src/ekklesia_portal/concepts/blog_post
 ```
 
 - {file}`blog_post_views.py`: path and view functions
-
-  > - path blog_posts: handles listing blog posts and creating new ones
-  > - path blog_post: handles viewing a blog post and editing it
-  > - view index: list blog posts
-  > - view new: show form for new blog post
-  > - view create: handle POST request from the new blog post form
-  > - view edit: show form for editing an existing blog post
-  > - view update: handle POST request from the edit blog post form
+  - path blog_posts: handles listing blog posts and creating new ones
+  - path blog_post: handles viewing a blog post and editing it
+  - view index: list blog posts
+  - view new: show form for new blog post
+  - view create: handle POST request from the new blog post form
+  - view edit: show form for editing an existing blog post
+  - view update: handle POST request from the edit blog post form
 
 - {file}`blog_post_contracts.py`: bundles blog post schema and form
 

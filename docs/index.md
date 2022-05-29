@@ -5,8 +5,7 @@
 
 # Ekklesia
 
-```{eval-rst}
-.. include:: _front_matter.rst
+```{include} _front_matter.md
 ```
 
 ```{toctree}

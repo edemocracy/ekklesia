@@ -8,8 +8,7 @@ to all Ekklesia Python web apps, *ekklesia-portal* and *ekklesia-voting*.
 *ekklesia-portal* is used as an example in the documentation.
 :::
 
-```{eval-rst}
-.. include:: ../_tech_stack.rst
+```{include} ../_tech_stack.md
 ```
 
 ```{toctree}
