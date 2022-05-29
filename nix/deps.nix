@@ -4,18 +4,23 @@ with builtins;
 let
   sources_ = if (sources == null) then import ./sources.nix else sources;
   pkgs = import sources_.nixpkgs { };
-  niv = (import sources_.niv { }).niv;
-  inherit (pkgs) lib;
+  py = pkgs.python310;
+  inherit (pkgs) lib niv;
+  myst-docutils = py.pkgs.callPackage ./myst-docutils.nix {
+  };
 
-  pythonEnv = pkgs.python39.withPackages (ps: with ps; [
+  pythonEnv = py.withPackages (ps: with ps; [
+    myst-docutils
     graphviz
     sphinx
-    sphinx_rtd_theme ]);
+    sphinx_rtd_theme
+  ]);
 
   tools = with pkgs; [
+    niv
     vale
   ];
 
 in {
-  inherit niv pkgs pythonEnv tools;
+  inherit pkgs pythonEnv tools;
 }

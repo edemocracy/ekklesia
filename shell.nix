@@ -1,14 +1,13 @@
 { sources ? null }:
 let
   deps = import ./nix/deps.nix { inherit sources; };
-  inherit (deps) niv pythonEnv pkgs tools;
+  inherit (deps) pythonEnv pkgs tools;
   caBundle = "${pkgs.cacert}/etc/ssl/certs/ca-bundle.crt";
 
 in
 pkgs.mkShell {
   name = "ekklesia-dev-env";
   buildInputs = [
-    niv
     pythonEnv
   ] ++ tools;
 
