@@ -43,7 +43,7 @@ Concepts use the following objects passed in from the outside:
 ```
 
 - **Cell**: Renders a HTML view of a concept by using data from a model object.
-- **Template**: Cells usually produce HTML output by using a {ref}`Pyjade Template <templates>`.
+- **Template**: Cells usually produce HTML output by using a {ref}`PyPugJS Template <templates>`.
   Templates use code from their associated cell and model fields to display stuff.
 - **Path**: Maps URL pattern to a model. It's easy to link to model instances from cells by using the `request.link` method.
   (-> [Morepath: Paths and Linking](https://morepath.readthedocs.io/en/latest/paths_and_linking.html))

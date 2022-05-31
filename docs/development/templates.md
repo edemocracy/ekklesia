@@ -2,8 +2,8 @@
 
 # Templates
 
-We use [PyJade](https://github.com/syrusakbary/pyjade) as a Jinja extension.
-Templates with the extension `.j2.jade` are passed to PyJade and converted to a Jinja template.
+We use [PyPugJS](https://github.com/kakulukia/pypugjs) (formerly *Pyjade*) as a Jinja extension.
+Templates with the extension `.j2.jade` or `.j2.pug` are passed to PyPugJS and converted to a Jinja template.
 
 Our templates mostly support the syntax of [Pug](https://pugjs.org/api/getting-started.html) which was called *Jade* before.
 Instead of Javascript, pieces of code in templates are interpreted as Jinja code.

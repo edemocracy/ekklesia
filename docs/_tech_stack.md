@@ -1,10 +1,11 @@
 - Backend:
   - Main language: [Python 3.10](https://www.python.org)
   - Web framework: [Morepath](http://morepath.readthedocs.org)
+  - Web API framework for ekklesia-notify: [FastAPI](https://fastapi.tiangolo.com/)
   - Testing: [pytest](https://pytest.org),
     [WebTest](https://docs.pylonsproject.org/projects/webtest/en/latest/)
 - Frontend
-  - Templates [Pyjade](https://github.com/syrusakbary/pyjade) (syntax like [Pug](https://pugjs.org))
+  - Templates [PyPugJS](https://github.com/kakulukia/pypugjs) (similar to [Pug](https://pugjs.org))
     with [Jinja](https://jinja.palletsprojects.com) as template engine.
   - [Sass](https://sass-lang.com) Framework [Bootstrap 4](https://getbootstrap.com)
   - [htmx](https://htmx.org) for "AJAX" requests directly from HTML.
