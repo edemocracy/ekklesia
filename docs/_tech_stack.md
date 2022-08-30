@@ -11,4 +11,5 @@
   - [htmx](https://htmx.org) for "AJAX" requests directly from HTML.
 - Database: [PostgreSQL 13](https://www.postgresql.com)
 - Dependency management and build tool: [Nix](https://nixos.org/nix)
+- Documentation: [Sphinx](https://sphinx-doc.org) with [MyST Markdown](https://myst-parser.readthedocs.io) parser.
 - (Optional) Docker / Kubernetes for running Docker images built by Nix
