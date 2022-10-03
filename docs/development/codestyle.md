@@ -3,11 +3,11 @@
 # Code Style
 
 We use [YAPF](https://github.com/google/yapf) to check Python code style and
-apply automatic formatting.
+apply automatic formatting. We plan to move to [black](https://black.readthedocs.io/en/stable/).
 
 Code should conform to [PEP8](https://www.python.org/dev/peps/pep-0008), the style guide for Python code.
 YAPF goes beyond that and applies stylistic changes as configured in the style file {file}`.style.yapf`.
-Our maximal line length is 120.
+Our maximal line length is 120 but we want to reduce it to 88, the black default.
 
 ## Auto-Formatting Python Code
 
