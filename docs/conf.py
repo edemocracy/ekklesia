@@ -22,7 +22,7 @@ copyright = "2022, Ekklesia contributors"
 author = "Ekklesia contributors"
 
 # The full version, including alpha/beta/rc tags
-release = "22.5.0"
+release = "22.10.0"
 
 
 # -- General configuration ---------------------------------------------------
