@@ -13,7 +13,10 @@ script or a Docker image.
 
 There's a NixOS module in {file}`nix/modules/default.nix` to run the backend.
 
-TODO: example import locally and with niv, static files with Nginx
+See [ekklesia.nix in ekklesia-deploy](https://github.com/edemocracy/ekklesia-deploy/blob/main/ekklesia.nix) for an
+example on how to use the module. In ekklesia-deploy, you can also see how
+you can pin the version of ekklesia-portal using niv and how to service
+static files with Nginx.
 
 ## With Docker
 
