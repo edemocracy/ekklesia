@@ -20,7 +20,7 @@ If you want to run the application elsewhere, please look at {ref}`quickstart`
 The following code snippets are written for *ekklesia-portal* but
 also work for *ekklesia-voting* when you change the project name.
 
-1. Get the [NixOS 21.11 VirtualBox appliance](https://nixos.org/download.html#nixos-virtualbox)
+1. Get the [NixOS 22.11 VirtualBox appliance](https://nixos.org/download.html#nixos-virtualbox)
    and follow the instructions there to import and start the VM.
    Enable clipboard integration in the VirtualBox menu bar with *Devices -> Shared Clipboard -> Host to Guest*
    so you can copy-paste longer commands from here.
@@ -116,6 +116,10 @@ also work for *ekklesia-voting* when you change the project name.
    ```
    python src/ekklesia_portal/runserver.py --debug -c config.yml 2>&1 | eliot-tree -l0
    ```
+
+You can use a browser, for example Firefox which is pre-installed on the VM to
+go to the application running at `http://localhost:8080`. Log in as 
+`testuser`, or `testadmin` for a privileged admin user.
 
 ## Setting up Tests
 
