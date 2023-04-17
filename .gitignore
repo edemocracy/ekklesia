@@ -2,3 +2,8 @@ build
 pyenv
 .envrc
 .direnv
+
+# Devenv
+.devenv*
+devenv.local.nix
+
