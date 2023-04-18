@@ -10,7 +10,7 @@ The Nix development shell provides a working Python interpreter with all needed 
 Python dependencies are managed by [Poetry](https://python-poetry.org).
 We use [poetry2nix](https://github.com/dpausp/poetry2nix) to integrate Poetry with our Nix automation code.
 Changes in the Poetry dependencies specification are picked up by Nix on the next run.
-If you use the [Lorri](https://github.com/target/lorri) daemon, adding, updating or removing packages
+If you use the {ref}`direnv` integration, adding, updating or removing packages
 automatically rebuilds the development shell which provides a Python interpreter with the wanted Python packages.
 
 Python package names and version constraints are listed in the `[tool.poetry.dependencies]`
@@ -34,9 +34,10 @@ ekklesia-common       20.07.0 b7c71cf
 
 `poetry add <package>` and `poetry remove <package>` should work as expected.
 
-After changing dependencies, it's a good idea to run `nix-build` to see if everything builds with Nix.
-Using `lorri daemon` also helps finding problems. Some "exotic" packages need further help to build with Nix.
-Problems can be caused by build dependencies that aren't recognized automatically by poetry2nix.
-In this case, the overrides in {file}`deps.nix` must be changed.
-We already have some examples of doing that.
-Poetry2nix provides a lot of common overrides so most popular packages should just work.
+After changing dependencies, it's a good idea to run `nix build` to see if
+everything builds with Nix. Using {ref}:`direnv` also helps finding problems.
+Some "exotic" packages need further help to build with Nix. Problems can be
+caused by build dependencies that aren't recognized automatically by poetry2nix.
+In this case, the overrides in {file}`deps.nix` must be changed. We already have
+some examples of doing that. Poetry2nix provides a lot of common overrides so
+most popular packages should just work.

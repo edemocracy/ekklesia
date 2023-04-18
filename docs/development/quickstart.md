@@ -2,32 +2,32 @@
 
 # Development Quick Start
 
-This chapter describes briefly how to set up a development environment to run a local instance of the application.
+This chapter describes briefly how to set up a development environment to run a
+local instance of the application.
 
-Setting up the environment for testing and running tests is described in {ref}`testing`.
+Setting up the environment for testing and running tests is described in
+{ref}`testing`.
 
-:::{note}
-The following instructions assume that *Nix* and *lorri* are already installed,
-and an empty + writable PostgreSQL database can be accessed somehow.
-If you don't have *Nix* and *lorri* or can’t use an existing PostgreSQL server,
-have a look at {ref}`dev-env`.
-:::
+The following instructions assume that *Nix* is already installed, has Nix
+flakes enabled, and an empty + writable PostgreSQL database can be accessed
+somehow.
 
-:::{note}
-It's strongly recommended to also follow the instructions at {ref}`cachix-binary-cache`
-or the first step will take a long time to complete.
-:::
+If you don't have *Nix* with Flakes support and or can’t use an existing
+PostgreSQL server, have a look at {ref}`dev-env`.
 
-1. Clone the repository and enter nix shell in the project root folder to open a shell which is
-   your dev environment:
+It's strongly recommended to also follow the instructions at {ref}
+`cachix-binary-cache` to speed up the installation.
+
+1. Clone the repository and enter the Nix dev shell in the project root folder
+   to open a shell which is your dev environment:
 
    ```
    git clone https://github.com/edemocracy/ekklesia-portal
    cd ekklesia-portal
-   lorri shell
+   nix develop
    ```
 
-2. Compile translations and CSS (look at dodo.py to see what this does):
+2. Compile translations and CSS (look at `dodo.py` to see what this does):
 
    ```
    doit
@@ -39,15 +39,21 @@ or the first step will take a long time to complete.
    Make sure that the database connection string points to an
    empty + writable database.
 
-4. Initialize the dev database with a custom config file:
+4. Set up the database for testing (look at `flake.nix` to see what this does):
 
    ```
-   python tests/create_test_db.py -c config.yml
+   create_test_db
    ```
 
-5. The development server can be run with a custom config file by
-   executing:
+5. Run tests:
 
    ```
-   python src/ekklesia_portal/runserver.py --debug -c config.yml 2>&1 | eliot-tree -l0
+   pytest
    ```
+
+6. Run the development server (look at `flake.nix` to see what this does):
+   ```
+   run_dev
+   ```
+
+Run `help` to see all commonly used dev shell commands.
