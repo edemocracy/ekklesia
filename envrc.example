@@ -1,7 +1,0 @@
-# Direnv integration: copy this to .envrc and modify as you like
-
-# either: use lorri to automatically rebuild the dev shell
-#eval "$(lorri direnv)"
-# or: use nix-direnv to automatically rebuild the dev shell
-#use nix
-
