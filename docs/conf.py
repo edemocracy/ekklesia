@@ -18,11 +18,11 @@
 # -- Project information -----------------------------------------------------
 
 project = "Ekklesia"
-copyright = "2022, Ekklesia contributors"
+copyright = "2023, Ekklesia contributors"
 author = "Ekklesia contributors"
 
 # The full version, including alpha/beta/rc tags
-release = "22.10.0"
+release = "23.04.0"
 
 
 # -- General configuration ---------------------------------------------------
