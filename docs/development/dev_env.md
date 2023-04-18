@@ -20,10 +20,11 @@ also work for *ekklesia-voting* when you change the project name.
 ## Install Nix
 
 :::{note}
-There's a new guide, [Zero to Nix: Get Nix running on your system]
-(https://zero-to-nix.com/start/install) which uses an alternative installer
-which wants to make it easier to set up Nix in the correct way.
-This looks promising but we haven't tested it, yet. Please try it out!
+There's a new guide, 
+[Zero to Nix: Get Nix running on your system](https://zero-to-nix.com/start/install)
+which uses an alternative installer that wants to make it easier to set up Nix
+in the correct way.  This looks promising but we haven't tested it, yet. Please
+try it out!
 :::
 
 ### Official Nix installer
