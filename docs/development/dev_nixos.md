@@ -78,9 +78,9 @@ also work for *ekklesia-voting* when you change the project name.
 2. Tell `direnv` to use `nix-direnv` whenever you enter the directory. `nix-direnv` starts building immediately which may take a while:
 
    ```
-   echo "use nix" > .envrc
+   cp envrc.example .envrc
    direnv allow
-   # direnv runs nix-build now
+   # direnv runs nix build now
    ```
 
 3. Compile translations and CSS (look at dodo.py to see what this does):
@@ -105,35 +105,45 @@ also work for *ekklesia-voting* when you change the project name.
        force_ssl: false
    ```
 
-5. Initialize the dev database with a custom config file:
+5. Initialize the dev database:
 
    ```
-   python tests/create_test_db.py -c config.yml
+   create_test_db
    ```
 
-6. The development server can be run with a custom config file by executing:
+6. Run the development server (look at `flake.nix` to see what this does):
 
    ```
-   python src/ekklesia_portal/runserver.py --debug -c config.yml 2>&1 | eliot-tree -l0
+   run_dev
    ```
 
-You can use a browser, for example Firefox which is pre-installed on the VM to
-go to the application running at `http://localhost:8080`. Log in as 
-`testuser`, or `testadmin` for a privileged admin user.
+   You can use a browser, for example Firefox which is pre-installed on the VM to
+   go to the application running at `http://localhost:8080`. Log in as 
+   `testuser`, or `testadmin` for a privileged admin user.
+7. To compile changes to stylesheets and translations automatically, run in a 
+   second shell tab/window:
+   ```shell
+   doit_auto
+   ```
+
 
 ## Setting up Tests
 
-1. Add an environment variable to .envrc to configure the test database URL:
+1. Add the test database URL to .envrc:
 
-   ```
-   echo 'export EKKLESIA_PORTAL_TEST_DB_URL="postgresql+psycopg2:///test_ekklesia_portal?host=/run/postgresql"' >> .envrc
-   direnv allow
-   ```
+```shell
+echo 'EKKLESIA_PORTAL_TEST_DB_URL="postgresql+psycopg2:///test_ekklesia_portal?host=/run/postgresql"' >> .envrc
+direnv allow
+```
+
+You can also edit `.envrc` directly. If you copied from {file}`envrc.
+example`, there's already a line for the test database URL you can 
+uncomment.
 
 2. Populate the test database:
 
    ```
-   python tests/create_test_db.py
+   create_test_db
    ```
 
 3. Run all tests:
