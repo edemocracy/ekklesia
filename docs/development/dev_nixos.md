@@ -129,18 +129,15 @@ also work for *ekklesia-voting* when you change the project name.
 
 ## Setting up Tests
 
-1. Add the test database URL to .envrc:
+1. To set the test database connection URL {file}, open `.envrc` in an editor
+   and uncomment the line with `EKKLESIA_PORTAL_TEST_DB_URL` (remove the `#`) .
+   The line in the file should look like this now:
+   ```
+   EKKLESIA_PORTAL_TEST_DB_URL="postgresql+psycopg2:///test_ekklesia_portal?host=/run/postgresql"
+   ```
+2. Run `direnv allow` to activate changes to `.envrc`.
 
-```shell
-echo 'EKKLESIA_PORTAL_TEST_DB_URL="postgresql+psycopg2:///test_ekklesia_portal?host=/run/postgresql"' >> .envrc
-direnv allow
-```
-
-You can also edit `.envrc` directly. If you copied from {file}`envrc.
-example`, there's already a line for the test database URL you can 
-uncomment.
-
-2. Populate the test database:
+2. Set up test data:
 
    ```
    create_test_db
