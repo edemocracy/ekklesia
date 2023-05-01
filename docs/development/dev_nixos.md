@@ -53,11 +53,12 @@ also work for *ekklesia-voting* when you change the project name.
    sudo mv ekklesia_dev.nix /etc/nixos
    ```
 
-6. Rebuild the NixOS system to activate our configuration and reload the current shell:
+6. Rebuild the NixOS system to activate the new configuration and run zsh as 
+   new shell:
 
    ```
    sudo nixos-rebuild switch
-   exec bash
+   zsh
    ```
 
 7. Tell [direnv](https://direnv.net) where [nix-direnv](https://github.com/nix-community/nix-direnv) is located:
@@ -82,6 +83,9 @@ also work for *ekklesia-voting* when you change the project name.
    direnv allow
    # direnv runs nix build now
    ```
+   
+   You can run `direnv allow` again to activate changes to the .envrc file 
+   or get an up-to-date shell when direnv couldn't run automatically.
 
 3. Compile translations and CSS (look at dodo.py to see what this does):
 
@@ -135,15 +139,16 @@ also work for *ekklesia-voting* when you change the project name.
    ```
    EKKLESIA_PORTAL_TEST_DB_URL="postgresql+psycopg2:///test_ekklesia_portal?host=/run/postgresql"
    ```
+   
 2. Run `direnv allow` to activate changes to `.envrc`.
 
-2. Set up test data:
+3. Set up test data:
 
    ```
    create_test_db
    ```
 
-3. Run all tests:
+4. Run all tests:
 
    ```
    pytest
