@@ -129,7 +129,7 @@ in
         };
       }
     ];
-    package = pkgs.postgresql_15;
+    package = pkgs.postgresql_14;
   };
 
   users.defaultUserShell = pkgs.zsh;
