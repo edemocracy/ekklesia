@@ -100,17 +100,15 @@ $ tree /home/ts/git/ekklesia-portal/src/ekklesia_portal/concepts/blog_post
 
 - {file}`blog_post_helper.py`: utilities that can be used in cells and from other concepts
 
-```{eval-rst}
-.. graphviz::
-   :caption: Generated files for the Comment concept
+```{graphviz}
+:caption: Generated files for the Comment concept
 
-   digraph concept {
-      "blog_post_views.py" -> "blog_post_cells.py"
-      "blog_post_views.py" -> "blog_post_contracts.py"
-      "blog_post_cells.py" -> "templates/*.j2.jade"
-      "blog_post_cells.py" -> "blog_posts.py"
-   }
-
+digraph concept {
+  "blog_post_views.py" -> "blog_post_cells.py"
+  "blog_post_views.py" -> "blog_post_contracts.py"
+  "blog_post_cells.py" -> "templates/*.j2.jade"
+  "blog_post_cells.py" -> "blog_posts.py"
+}
 ```
 
 Tests live outside of the application package:
