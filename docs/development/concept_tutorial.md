@@ -22,24 +22,23 @@ Concepts use the following objects passed in from the outside:
 - **Model**: Typically, this is an object from a database or a collection of them.
   But can be of any class that is used to carry around information belonging to a concept.
 
-```{eval-rst}
-.. graphviz::
-   :caption: Building blocks of a concept
+```{graphviz}
+:caption: Building blocks of a concept
 
-   digraph concept {
-      Path -> Model
-      View -> Model
-      View -> Cell
-      Cell -> Model
-      Cell -> Template[dir=both]
-      Cell -> Form
-      Form -> Schema
-      Form -> Model[dir=both]
-      Cell -> Request
-      Path -> Request
-      View -> Request
-      Form -> Request
-   }
+digraph concept {
+  Path -> Model
+  View -> Model
+  View -> Cell
+  Cell -> Model
+  Cell -> Template[dir=both]
+  Cell -> Form
+  Form -> Schema
+  Form -> Model[dir=both]
+  Cell -> Request
+  Path -> Request
+  View -> Request
+  Form -> Request
+}
 ```
 
 - **Cell**: Renders a HTML view of a concept by using data from a model object.
