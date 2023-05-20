@@ -112,8 +112,10 @@ also work for *ekklesia-voting* when you change the project name.
 5. Initialize the dev database:
 
    ```
-   create_test_db
+   create_dev_db
    ```
+
+   This command populates the `ekklesia_portal` database.
 
 6. Run the development server (look at `flake.nix` to see what this does):
 
@@ -147,6 +149,8 @@ also work for *ekklesia-voting* when you change the project name.
    ```
    create_test_db
    ```
+
+   This command populates the `test_ekklesia_portal` database.
 
 4. Run all tests:
 
