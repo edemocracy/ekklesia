@@ -15,8 +15,8 @@ somehow.
 If you don't have *Nix* with Flakes support and or can’t use an existing
 PostgreSQL server, have a look at {ref}`dev-env`.
 
-It's strongly recommended to also follow the instructions at {ref}
-`cachix-binary-cache` to speed up the installation.
+It's strongly recommended to also follow the instructions at 
+{ref}`cachix-binary-cache` to speed up the installation.
 
 1. Clone the repository and enter the Nix dev shell in the project root folder
    to open a shell which is your dev environment:
