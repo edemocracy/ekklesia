@@ -15,3 +15,10 @@ Compile CSS (look at {file}`dodo.py` to see what this does):
 ```shell
 doit css_compile
 ```
+
+To compile changes to stylesheets (and translations) automatically in the 
+background, run:
+
+```shell
+doit_auto
+```
