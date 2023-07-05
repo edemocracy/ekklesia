@@ -116,7 +116,8 @@ in
       "demo"
       "ekklesia_portal"
       "test_ekklesia_portal"
-      #"ekklesia_voting" # add additional databases like this
+      "ekklesia_voting"
+      "test_ekklesia_voting"
     ];
     ensureUsers = [
       {
@@ -125,10 +126,12 @@ in
           "DATABASE demo" = "ALL PRIVILEGES";
           "DATABASE ekklesia_portal" = "ALL PRIVILEGES";
           "DATABASE test_ekklesia_portal" = "ALL PRIVILEGES";
-          #"DATABASE ekklesia_voting" = "ALL PRIVILEGES";
+          "DATABASE ekklesia_voting" = "ALL PRIVILEGES";
+          "DATABASE test_ekklesia_voting" = "ALL PRIVILEGES";
         };
       }
     ];
+    # PostgreSQL 15 doesn't work with ensurePermissions correctly, don't upgrade for now.
     package = pkgs.postgresql_14;
   };
 
