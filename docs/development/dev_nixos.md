@@ -96,17 +96,20 @@ also work for *ekklesia-voting* when you change the project name.
 4. Create a config file named `config.yml` using the config template from `src/ekklesia_portal/config.example.yml`.
    Under `database`, you have to change `uri`.
    Under `app`, change `force_ssl` to *false* and `insecure_development_mode` to *true*.
-   The beginning of the config file should look like this:
+   The config file should look like this:
 
    ```
    database:
        uri: "postgresql+psycopg2:///ekklesia_portal?host=/run/postgresql"
-       fts_language: 'english'
    app:
        instance_name: my_ekklesia_portal
        insecure_development_mode: true
        login_visible: true
        force_ssl: false
+   browser_session:
+       secret_key: dev
+       cookie_secure: false
+       permanent_lifetime: 999999
    ```
 
 5. Initialize the dev database:
